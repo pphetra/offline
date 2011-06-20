@@ -1,0 +1,14 @@
+{
+  "name": "Offline Catalog [c001]",
+  "description": "bitec",
+  "version": "1",
+  "app": {
+    "launch": {
+      "local_path": "main.html"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "128": "icon.png"
+  }
+}
