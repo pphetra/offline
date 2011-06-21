@@ -8,19 +8,19 @@ var data = {
             price: 10.00,
             variations: [
                 {
-                    "variation": {"ตัววง":"ทอง"},
+                    "variation": ["ตัววง:ทอง"],
                     "price":20,
                     "type":"Adjust"
                 },{
-                    "variation": {"หัวแหวน":"ทับทิม"},
+                    "variation": ["หัวแหวน:ทับทิม"],
                     "price":5,
                     "type":"Adjust"
                 },{
-                    "variation": {"หัวแหวน":"พลอย"},
+                    "variation": ["หัวแหวน:พลอย"],
                     "price":-5,
                     "type":"Adjust"
                 },{
-                    "variation": {"ประดับ 2":"หินสีเหลือง"},
+                    "variation": ["ประดับ 2:หินสีเหลือง"],
                     "price":-10,
                     "type":"Adjust"
                 }
@@ -76,5 +76,30 @@ Ext.define('Catalog.model.Product', {
             type: 'json',
             root: 'products'
         }
+    },
+
+    calculatePrice: function(currentFeatures) {
+        var basePrice = this.get('price');
+        var vaMap = this.getVariationAdjustMap();
+        Ext.each(currentFeatures, function(item) {
+             var key = item.name + ':' + item.value;
+             if (vaMap[key] !== undefined) {
+                 basePrice += vaMap[key]
+             }
+        });
+        return basePrice;
+    },
+
+    getVariationAdjustMap: function() {
+        if (! this._vMap) {
+            var map = this._vMap = {};
+            Ext.each(this.get('variations'), function(item) {
+                if (item.type == 'Adjust') { 
+                    var key = item.variation.sort().join('@');
+                    map[key] = item.price;
+                }
+            })
+        }
+        return this._vMap;
     }
 })

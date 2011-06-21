@@ -1,3 +1,16 @@
+/**
+แนวทางการ load data
+Ext.define('User', { extend: 'Ext.data.Model', 
+    fields: [
+        'name'
+    ]
+})
+
+store = Ext.create('Ext.data.Store', {model: 'User'})
+
+store.loadData([{name: 'pok'}])
+**/
+
 Ext.define('Catalog.store.Categories', {
     extend: 'Ext.data.Store',
     model: 'Catalog.model.Category',
@@ -11,16 +24,12 @@ Ext.define('Catalog.store.Categories', {
     //         root: 'categories'
     //     }
     // }
-    data: {
-        categories: [
-            {id: 1,
-             name: 'cat1', 
-             categories: [
-                {id: 2, name: 'cat1.1'},
-                {id: 3, name: 'cat1.2'}
-             ]},
-            {id: 4, name: 'cat2'},
-            {id: 5, name: 'cat3'}
-        ]
-    }  
+    // data: {
+    //     categories: [
+    //         {id: 0, name: 'ALL'},
+    //         {id: 1, name: 'แหวนประดับ', imagePath: '/images/cat_ring.png'}, 
+    //         {id: 2, name: 'สร้อยคอ', imagePath: '/images/cat_amulet.png'},
+    //         {id: 3, name: 'กำไลข้อมือ', imagePath: '/images/cat_3.png'}
+    //     ]
+    // }  
 })

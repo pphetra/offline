@@ -2,18 +2,23 @@ Ext.define('Catalog.controller.Categories', {
     extend: 'Ext.app.Controller',
     models: 'Catalog.model.Category',
     views: [
-        'category.List'
+        'category.List',
+        'product.List'
     ],
     stores: 'Catalog.store.Categories',
+
     init: function() {
         console.log('Catalog.controller.Categories init');
         this.control({
-            'viewport > categorylist': {
-                render: this.onPanelRendered
+            'categorylist > dataview': {
+                itemclick: this.onSelectCategory
             }
         });
     },
-    onPanelRendered: function() {
-        console.log('renderer');
+
+    onSelectCategory: function(view, record, item, index, e, options) {
+        var pStore = Ext.StoreManager.lookup('Catalog.store.Products');
+        var cid = record.get('id');
+        pStore.setCategoryFilter(cid);
     }
 })
