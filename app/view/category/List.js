@@ -1,7 +1,6 @@
 Ext.define('Catalog.view.category.List', {
     extend: 'Ext.Panel',
     alias: 'widget.categorylist',
-    title: 'Categories',
     initComponent: function() {
         this.items = Ext.create('Ext.view.View', {
             tpl: [

@@ -13,35 +13,56 @@ Ext.application({
             items: [
                 {
                     region: 'north',
-                    height: 36,
-                    bodyStyle: "padding: 5px;",
-                    items: [
-                        {
-                            xtype: 'triggerfield',
-                            id: 'q',
-                            width: 200,
-                            triggerCls: 'x-form-search-trigger'
+                    height: 50,
+                    border: false,
+                    html: [
+                        '<div class="header">',
+                        '</div>'
+                    ],
+                    listeners: {
+                        afterrender: function() {
+                            var headerdom = Ext.query('div.header')[0];
+                            var btn = new Ext.form.field.Trigger({
+                                id: 'q',
+                                width: 200,
+                                triggerCls: 'x-form-search-trigger',
+                                renderTo: headerdom
+                            })
+
+                            Ext.create(Catalog.view.category.Menu, {
+                                
+                                id: 'menu',
+                                renderTo  : headerdom
+                                
+                                
+                            });
                         }
-                    ]
+                    }
                 },
                 {
                     xtype: 'categorylist',
                     id: 'categoryView',
                     region: 'west',
-                    width: 130
+                    width: 150,
+                    floating: true,
+                    border: false
                 },
                 {
                     xtype: 'productlist',
                     region: 'center',
-                    id: 'productListView'
+                    id: 'productListView',
+                    border: false
+                },
+                {
+                    region: 'south',
+                    height: 40,
+                    html: [
+                        '<div class="footer">Copyright</div>'
+                    ]
                 }
             ]
         });
 
-        var cStore = Ext.StoreManager.lookup('Catalog.store.Categories');
-        var pStore = Ext.StoreManager.lookup('Catalog.store.Products');
-        cStore.loadData(catData);
-        pStore.loadData(proData);
     }
 });
 

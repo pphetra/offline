@@ -14,6 +14,7 @@ store.loadData([{name: 'pok'}])
 Ext.define('Catalog.store.Categories', {
     extend: 'Ext.data.Store',
     model: 'Catalog.model.Category',
+    data: catData
     // this not work because chrome return status == 0 instead of 200
     // autoLoad: true,
     // proxy: {

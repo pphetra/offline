@@ -16,11 +16,18 @@ Ext.define('Catalog.store.Products', {
         this.applyFilters();
     },
     setCategoryFilter: function(categoryId) {
-        this.filterValue.categoryId = categoryId;
+        if (categoryId == 'all') {
+            this.filterValue.categoryId = 0;            
+        } else {
+            this.filterValue.categoryId = categoryId;
+        }
         this.applyFilters();
     },
 
     applyFilters: function() {
+        this.suspendEvents();
+        this.clearFilter();
+        this.resumeEvents();
         this.clearFilter(true);
         var filterValue = this.filterValue;
         this.filterBy(function(record) {
@@ -30,6 +37,7 @@ Ext.define('Catalog.store.Products', {
             if (filterValue.categoryId != 0 && filterValue.categoryId != categoryId) {
                 return false;
             }
+
             if (filterValue.q) {
                 if (code.indexOf(filterValue.q) >= 0) {
                     return true;
@@ -41,8 +49,11 @@ Ext.define('Catalog.store.Products', {
             } 
             return true;
 
-        });  
+        });
+        this.sort('code', 'ASC');
     },
+
+    data: proData
 /*
     data: {
         products: [

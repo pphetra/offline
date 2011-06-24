@@ -2,8 +2,8 @@ Ext.define('Catalog.view.product.Detail', {
     extend: 'Ext.Window',
     alias: 'widget.productdetail',
     layout: 'fit',
-    width: 800,
-    height: 500,
+    width: 760,
+    height: 460,
 
     initComponent: function() {
         this.tpl = new Ext.XTemplate(
@@ -15,7 +15,6 @@ Ext.define('Catalog.view.product.Detail', {
                     '<div class="content">',
                         '<div class="name">{name}</div>',
                     '</div>',
-                    '<div class="price">${price}</div>',
                     '<div class="features-wrap">',
                     '<tpl for="features">',
                         '<div class="feature-box">',
@@ -29,6 +28,7 @@ Ext.define('Catalog.view.product.Detail', {
                             '</span>',
                         '</div>',
                     '</tpl>',
+                    '<div class="price-wrap">Price : <span class="price">${price}</span></div>',
                     '</div>',
                 '</div>',
             '</div>',
@@ -45,8 +45,8 @@ Ext.define('Catalog.view.product.Detail', {
     },
 
     updatePrice: function(newPrice) {
-        var elm = this.el.down('div.price');
+        var elm = this.el.down('span.price');
         elm.update('$' + newPrice);
-        elm.highlight();
+        elm.highlight('#ff8c00',  { attr: 'color', duration: 2000 });
     }
 })

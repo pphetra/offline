@@ -225,7 +225,7 @@ proData = [
     },
 
     {
-        id: 10,
+        id: 5,
         code: 'a001',
         name: 'amulet 001',
         description: 'long text here',

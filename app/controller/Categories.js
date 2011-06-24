@@ -3,7 +3,8 @@ Ext.define('Catalog.controller.Categories', {
     models: 'Catalog.model.Category',
     views: [
         'category.List',
-        'product.List'
+        'product.List',
+        'category.Menu'
     ],
     stores: 'Catalog.store.Categories',
 
@@ -12,6 +13,13 @@ Ext.define('Catalog.controller.Categories', {
         this.control({
             'categorylist > dataview': {
                 itemclick: this.onSelectCategory
+            },
+
+            'categorymenu': {
+                categorySelect: function(categoryId) {
+                    var pStore = Ext.StoreManager.lookup('Catalog.store.Products');
+                    pStore.setCategoryFilter(categoryId);
+                }
             }
         });
     },

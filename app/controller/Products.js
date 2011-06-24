@@ -7,15 +7,20 @@ Ext.define('Catalog.controller.Products', {
     ],
     stores: 'Catalog.store.Products',
     init: function() {
+        var self = this;
+        this.dtask = Ext.create('Ext.util.DelayedTask', self.onSearchChange, self);
+
         this.control({
             '#productListView > dataview': {
                 itemclick: this.onSelectProduct
             },
             '#q': {
-                change: this.onSearchChange
+                change: function(field, newValue, oldVale) {
+                    this.q = newValue;
+                    this.dtask.delay(400);
+                }
             }
         })
-        var self = this;
         this.detailWindow = new Catalog.view.product.Detail({
             closeAction: 'hide',
             headerPosition: 'bottom',
@@ -37,7 +42,7 @@ Ext.define('Catalog.controller.Products', {
 
     onSelectProduct: function(view, record, item, index, e, options) {
         this.currentRecord = record;
-        this.detailWindow.setTitle(record.get('code'));
+        //this.detailWindow.setTitle(record.get('code'));
         this.detailWindow.query('panel')[0].update(record.data);
         this.detailWindow.show();
     },
@@ -61,8 +66,8 @@ Ext.define('Catalog.controller.Products', {
         this.detailWindow.updatePrice(newPrice);
     },
 
-    onSearchChange: function(field, newValue, oldVale) {
+    onSearchChange: function() {
         var pStore = Ext.StoreManager.lookup('Catalog.store.Products');
-        pStore.setSearchFilter(newValue);
+        pStore.setSearchFilter(this.q);
     }
 })

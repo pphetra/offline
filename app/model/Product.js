@@ -59,7 +59,7 @@ var data = {
 Ext.define('Catalog.model.Product', {
 	extend: 'Ext.data.Model',
 	fields: [
-        {name: 'id', type: 'long'},
+        {name: 'id', type: 'int'},
 		{name: 'code', type: 'string'},
         {name: 'name', type: 'string'},
         {name: 'description', type: 'string'},
@@ -70,6 +70,7 @@ Ext.define('Catalog.model.Product', {
         'variations',
         'features'
 	],
+    idProperty : 'id',
     proxy: {
         type: 'memory',
         reader: {
