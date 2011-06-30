@@ -28,8 +28,8 @@ Ext.define('Catalog.view.product.Detail', {
                             '</span>',
                         '</div>',
                     '</tpl>',
-                    '<div class="price-wrap">Price : <span class="price">${price}</span></div>',
                     '</div>',
+                    '<div class="price-wrap">Price : <span class="price">${price}</span></div>',
                 '</div>',
             '</div>',
             {
