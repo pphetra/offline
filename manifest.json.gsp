@@ -1,6 +1,6 @@
 {
-  "name": "Offline Catalog [c001]",
-  "description": "bitec",
+  "name": "Offline Catalog [${catalog.code}]",
+  "description": "${catalog.name}",
   "version": "1",
   "app": {
     "launch": {
