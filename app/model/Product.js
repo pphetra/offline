@@ -96,7 +96,11 @@ Ext.define('Catalog.model.Product', {
             var map = this._vMap = {};
             Ext.each(this.get('variations'), function(item) {
                 if (item.type == 'Adjust') { 
-                    var key = item.variation.sort().join('@');
+                    var ary = []
+                    for (prop in item.variation) {
+                        ary.push(prop + ":" + item.variation[prop])
+                    }
+                    var key = ary.join('@');
                     map[key] = item.price;
                 }
             })

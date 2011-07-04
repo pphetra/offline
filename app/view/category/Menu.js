@@ -15,12 +15,18 @@ Ext.define('Catalog.view.category.Menu', {
 			me.fireEvent('categorySelect', comp.id);
 			
 		}
-		this.menu = [
-            {text: 'All', id:'all', handler: this.onSelect},
-            {text: 'Ring', id:1, handler: this.onSelect},
-            {text: 'Amulet', id:2, handler: this.onSelect},
-            {text: 'Etc', id:3, handler: this.onSelect}
-        ]
+
+        var menu = [];
+        var self = this;
+        Ext.each(catData, function(item) {
+            menu.push({
+                text: item.name,
+                id: item.id,
+                handler: self.onSelect
+            })
+        })
+        this.menu = menu
+
 		this.callParent(arguments);
 	}
 })

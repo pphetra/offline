@@ -17,19 +17,19 @@ proData = [
         categoryId: 1,
         variations: [
             {
-                "variation": ["ตัววง:ทอง"],
+                "variation": {"ตัววง": "ทอง"},
                 "price":20,
                 "type":"Adjust"
             },{
-                "variation": ["เรือนประดับ 1:dimond"],
+                "variation": {"เรือนประดับ 1": "dimond"},
                 "price":7,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:พลอย"],
+                "variation": {"หัวแหวน": "พลอย"},
                 "price":-5,
                 "type":"Adjust"
             },{
-                "variation": ["ประดับ 2:หินสีเหลือง"],
+                "variation": {"ประดับ 2": "หินสีเหลือง"},
                 "price":-10,
                 "type":"Adjust"
             }
@@ -71,19 +71,19 @@ proData = [
         categoryId: 1,
         variations: [
             {
-                "variation": ["ตัววง:ทอง"],
+                "variation": {"ตัววง":"ทอง"},
                 "price":20,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:ทับทิม"],
+                "variation": {"หัวแหวน":"ทับทิม"},
                 "price":5,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:พลอย"],
+                "variation": {"หัวแหวน": "พลอย"},
                 "price":-5,
                 "type":"Adjust"
             },{
-                "variation": ["ประดับ 2:หินสีเหลือง"],
+                "variation": {"ประดับ 2": "หินสีเหลือง"},
                 "price":-10,
                 "type":"Adjust"
             }
@@ -125,23 +125,23 @@ proData = [
         categoryId: 1,
         variations: [
             {
-                "variation": ["ตัววง:เงิน"],
+                "variation": {"ตัววง": "เงิน"},
                 "price":-15,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:Amethyst"],
+                "variation": {"หัวแหวน":"Amethyst"},
                 "price":15,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:Dimond"],
+                "variation": {"หัวแหวน":"Dimond"},
                 "price":50,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:Sapphire"],    
+                "variation": {"หัวแหวน":"Sapphire"},    
                 "price":22,
                 "type":"Adjust"
             },{
-                "variation": ["ประดับ 1:dimond"],
+                "variation": {"ประดับ 1":"dimond"},
                 "price":25,
                 "type":"Adjust"
             }
@@ -201,19 +201,19 @@ proData = [
         categoryId: 1,
         variations: [
             {
-                "variation": ["ตัววง:ทอง"],
+                "variation": {"ตัววง":"ทอง"},
                 "price":20,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:ทับทิม"],
+                "variation": {"หัวแหวน":"ทับทิม"},
                 "price":5,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:พลอย"],
+                "variation": {"หัวแหวน":"พลอย"},
                 "price":-5,
                 "type":"Adjust"
             },{
-                "variation": ["ประดับ 2:หินสีเหลือง"],
+                "variation": {"ประดับ 2":"หินสีเหลือง"},
                 "price":-10,
                 "type":"Adjust"
             }
@@ -256,19 +256,19 @@ proData = [
         categoryId: 2,
         variations: [
             {
-                "variation": ["ตัววง:ทอง"],
+                "variation": {"ตัววง":"ทอง"},
                 "price":20,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:ทับทิม"],
+                "variation": {"หัวแหวน":"ทับทิม"},
                 "price":5,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:พลอย"],
+                "variation": {"หัวแหวน":"พลอย"},
                 "price":-5,
                 "type":"Adjust"
             },{
-                "variation": ["ประดับ 2:หินสีเหลือง"],
+                "variation": {"ประดับ 2":"หินสีเหลือง"},
                 "price":-10,
                 "type":"Adjust"
             }
@@ -311,19 +311,19 @@ proData = [
         categoryId: 1,
         variations: [
             {
-                "variation": ["ตัววง:ทอง"],
+                "variation": {"ตัววง":"ทอง"},
                 "price":20,
                 "type":"Adjust"
             },{
-                "variation": ["เรือนประดับ 1:dimond"],
+                "variation": {"เรือนประดับ 1": "dimond"},
                 "price":7,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:พลอย"],
+                "variation": {"หัวแหวน":"พลอย"},
                 "price":-5,
                 "type":"Adjust"
             },{
-                "variation": ["ประดับ 2:หินสีเหลือง"],
+                "variation": {"ประดับ 2":"หินสีเหลือง"},
                 "price":-10,
                 "type":"Adjust"
             }
@@ -366,19 +366,19 @@ proData = [
         categoryId: 1,
         variations: [
             {
-                "variation": ["ตัววง:ทอง"],
+                "variation": {"ตัววง":"ทอง"},
                 "price":20,
                 "type":"Adjust"
             },{
-                "variation": ["เรือนประดับ 1:dimond"],
+                "variation": {"เรือนประดับ 1":"dimond"},
                 "price":7,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:พลอย"],
+                "variation": {"หัวแหวน":"พลอย"},
                 "price":-5,
                 "type":"Adjust"
             },{
-                "variation": ["ประดับ 2:หินสีเหลือง"],
+                "variation": {"ประดับ 2":"หินสีเหลือง"},
                 "price":-10,
                 "type":"Adjust"
             }
@@ -421,19 +421,19 @@ proData = [
         categoryId: 1,
         variations: [
             {
-                "variation": ["ตัววง:ทอง"],
+                "variation": {"ตัววง":"ทอง"},
                 "price":20,
                 "type":"Adjust"
             },{
-                "variation": ["เรือนประดับ 1:dimond"],
+                "variation": {"เรือนประดับ 1":"dimond"},
                 "price":7,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:พลอย"],
+                "variation": {"หัวแหวน":"พลอย"},
                 "price":-5,
                 "type":"Adjust"
             },{
-                "variation": ["ประดับ 2:หินสีเหลือง"],
+                "variation": {"ประดับ 2":"หินสีเหลือง"},
                 "price":-10,
                 "type":"Adjust"
             }
@@ -476,19 +476,19 @@ proData = [
         categoryId: 1,
         variations: [
             {
-                "variation": ["ตัววง:ทอง"],
+                "variation": {"ตัววง":"ทอง"},
                 "price":10,
                 "type":"Adjust"
             },{
-                "variation": ["เรือนประดับ 1:dimond"],
+                "variation": {"เรือนประดับ 1":"dimond"},
                 "price":7,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:พลอย"],
+                "variation": {"หัวแหวน":"พลอย"},
                 "price":-5,
                 "type":"Adjust"
             },{
-                "variation": ["ประดับ 2:หินสีเหลือง"],
+                "variation": {"ประดับ 2":"หินสีเหลือง"},
                 "price":-10,
                 "type":"Adjust"
             }
@@ -556,19 +556,19 @@ proData = [
         categoryId: 1,
         variations: [
             {
-                "variation": ["ตัววง:ทอง"],
+                "variation": {"ตัววง":"ทอง"},
                 "price":20,
                 "type":"Adjust"
             },{
-                "variation": ["เรือนประดับ 1:dimond"],
+                "variation": {"เรือนประดับ 1":"dimond"},
                 "price":7,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:พลอย"],
+                "variation": {"หัวแหวน":"พลอย"},
                 "price":-5,
                 "type":"Adjust"
             },{
-                "variation": ["ประดับ 2:หินสีเหลือง"],
+                "variation": {"ประดับ 2":"หินสีเหลือง"},
                 "price":-10,
                 "type":"Adjust"
             }
@@ -611,19 +611,19 @@ proData = [
         categoryId: 1,
         variations: [
             {
-                "variation": ["ตัววง:ทอง"],
+                "variation": {"ตัววง":"ทอง"},
                 "price":20,
                 "type":"Adjust"
             },{
-                "variation": ["เรือนประดับ 1:dimond"],
+                "variation": {"เรือนประดับ 1":"dimond"},
                 "price":7,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:พลอย"],
+                "variation": {"หัวแหวน":"พลอย"},
                 "price":-5,
                 "type":"Adjust"
             },{
-                "variation": ["ประดับ 2:หินสีเหลือง"],
+                "variation": {"ประดับ 2":"หินสีเหลือง"},
                 "price":-10,
                 "type":"Adjust"
             }
@@ -667,19 +667,19 @@ proData = [
         categoryId: 2,
         variations: [
             {
-                "variation": ["ตัววง:ทอง"],
+                "variation": {"ตัววง":"ทอง"},
                 "price":20,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:ทับทิม"],
+                "variation": {"หัวแหวน":"ทับทิม"},
                 "price":5,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:พลอย"],
+                "variation": {"หัวแหวน":"พลอย"},
                 "price":-5,
                 "type":"Adjust"
             },{
-                "variation": ["ประดับ 2:หินสีเหลือง"],
+                "variation": {"ประดับ 2":"หินสีเหลือง"},
                 "price":-10,
                 "type":"Adjust"
             }
@@ -722,19 +722,19 @@ proData = [
         categoryId: 2,
         variations: [
             {
-                "variation": ["ตัววง:ทอง"],
+                "variation": {"ตัววง":"ทอง"},
                 "price":20,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:ทับทิม"],
+                "variation": {"หัวแหวน":"ทับทิม"},
                 "price":5,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:พลอย"],
+                "variation": {"หัวแหวน":"พลอย"},
                 "price":-5,
                 "type":"Adjust"
             },{
-                "variation": ["ประดับ 2:หินสีเหลือง"],
+                "variation": {"ประดับ 2":"หินสีเหลือง"},
                 "price":-10,
                 "type":"Adjust"
             }
@@ -777,19 +777,19 @@ proData = [
         categoryId: 2,
         variations: [
             {
-                "variation": ["ตัววง:ทอง"],
+                "variation": {"ตัววง":"ทอง"},
                 "price":20,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:ทับทิม"],
+                "variation": {"หัวแหวน":"ทับทิม"},
                 "price":5,
                 "type":"Adjust"
             },{
-                "variation": ["หัวแหวน:พลอย"],
+                "variation": {"หัวแหวน":"พลอย"},
                 "price":-5,
                 "type":"Adjust"
             },{
-                "variation": ["ประดับ 2:หินสีเหลือง"],
+                "variation": {"ประดับ 2":"หินสีเหลือง"},
                 "price":-10,
                 "type":"Adjust"
             }
